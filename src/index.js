@@ -12,7 +12,7 @@ import * as serviceWorker from './serviceWorker';
 import reportWebVitals from './reportWebVitals';
 
 
-// Do this before calling ReactDOM.render
+// Initialize store before calling ReactDOM.render
 initializeStore()
 
 

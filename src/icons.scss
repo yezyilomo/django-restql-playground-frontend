@@ -1,0 +1,19 @@
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: rgb(70, 70, 70);
+    mask-size: cover;
+}
+
+.icon-menu {
+    mask: url(icons/open-menu.svg);
+}
+
+.icon-github{
+    mask: url(icons/github.svg);
+}
+
+.icon-play-btn{
+    mask: url(icons/play-button.svg)
+}

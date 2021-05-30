@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+
+.nav-toggle{
+  position: fixed;
+  right: 12px;
+  top: 15px;
+  z-index: 40000;
+}
+
+.nav-toggle .icon-menu{
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+}

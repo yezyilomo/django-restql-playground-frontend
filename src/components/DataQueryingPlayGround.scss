@@ -1,0 +1,81 @@
+@import '../variables.scss';
+
+
+.data-querying {
+/* Editor */
+.query_editor_container, .response_container {
+    border-radius: 18px;
+    overflow: hidden;
+    border: solid 6px transparent;
+    padding: 6px;
+}
+
+/* Editor */
+.query_editor_container>div, .response_container>div {
+  background-color: rgb(245, 245, 245);
+  height: calc(60vh + 12px);
+  overflow-y: auto;
+}
+
+.query_editor, .response {
+  min-height: calc(60vh + 12px);
+}
+
+/* Start style sidebar scrollbar */
+$scrollbarBG: rgb(238, 238, 238);
+$thumbBG: $primary;
+
+.query_editor_container>div::-webkit-scrollbar,
+.response_container>div::-webkit-scrollbar {
+  width: 10px;
+}
+
+.query_editor_container>div,
+.response_container>div {
+  scrollbar-width: auto;
+  scrollbar-color: $thumbBG $scrollbarBG;
+}
+
+.query_editor_container>div::-webkit-scrollbar-track,
+.response_container>div::-webkit-scrollbar-track {
+  background: $scrollbarBG;
+}
+
+.query_editor_container>div::-webkit-scrollbar-thumb,
+.response_container>div::-webkit-scrollbar-thumb {
+  background-color: $thumbBG;
+  border-radius: 6px;
+  border: 3px solid $scrollbarBG;
+}
+/* End style sidebar scrollbar */
+
+$actionsColor: rgb(245, 245, 245);
+
+.send_btn {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    top: 170px;
+    z-index: 500;
+    border: solid 8px #ffffff;
+
+    .icon-play-btn{
+      width: 25px;
+      height: 25px;
+      position: relative;
+      top: 3px;
+      background: $actionsColor;
+    }
+
+    .loader {
+      height: 25px;
+      width: 25px;
+      position: relative;
+      top: 3px;
+      right: 2px;
+      border-width: 5px;
+      border-color: transparent $actionsColor $actionsColor $actionsColor;
+    }
+}
+}

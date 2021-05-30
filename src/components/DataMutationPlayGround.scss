@@ -1,0 +1,107 @@
+@import '../variables.scss';
+
+
+.data-mutation {
+/* Editor */
+.editors_container, .response_container {
+    border-radius: 18px;
+    overflow: hidden;
+    border: solid 6px transparent;
+    padding: 6px;
+}
+
+/* Editor */
+.editors_container .query_editor_container{
+    height: 20vh;
+    overflow-y: auto;
+    border-radius: 12px;
+}
+
+/* Editor */
+.editors_container .payload_editor_container{
+    height: 40vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+.query_editor, .payload_editor {
+    background-color: rgb(245, 245, 245);
+}
+
+.query_editor {
+    min-height: 20vh;
+}
+
+.payload_editor {
+    min-height: 40vh;
+}
+
+
+.response_container>div {
+  background-color: rgb(245, 245, 245);
+  height: calc(60vh + 12px);
+  overflow-y: auto;
+}
+
+.response {
+  min-height: calc(60vh + 12px);
+}
+
+/* Start style scrollbar */
+$scrollbarBG: rgb(238, 238, 238);
+$thumbBG: $primary;
+
+.editors_container>div::-webkit-scrollbar,
+.response_container>div::-webkit-scrollbar {
+  width: 10px;
+}
+
+.editors_container>div,
+.response_container>div {
+  scrollbar-width: auto;
+  scrollbar-color: $thumbBG $scrollbarBG;
+}
+
+.editors_container>div::-webkit-scrollbar-track,
+.response_container>div::-webkit-scrollbar-track {
+  background: $scrollbarBG;
+}
+
+.editors_container>div::-webkit-scrollbar-thumb,
+.response_container>div::-webkit-scrollbar-thumb {
+  background-color: $thumbBG;
+  border-radius: 6px;
+  border: 3px solid $scrollbarBG;
+}
+/* End style scrollbar */
+
+$actionsColor: rgb(245, 245, 245);
+.send_btn {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    top: 118px;
+    z-index: 500;
+    border: solid 8px #ffffff;
+
+    .icon-play-btn{
+      width: 25px;
+      height: 25px;
+      position: relative;
+      top: 3px;
+      background: $actionsColor;
+    }
+
+    .loader {
+      height: 25px;
+      width: 25px;
+      position: relative;
+      top: 3px;
+      right: 2px;
+      border-width: 5px;
+      border-color: transparent $actionsColor $actionsColor $actionsColor;
+    }
+}
+}

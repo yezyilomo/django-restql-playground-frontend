@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+.input-group-prepend label,
+.custom-select{
+    border-radius: $btn-border-radius;
+}
+
+.input-group-prepend label{
+    background-color: rgb(245, 245, 245);
+}
+
+/*
+.input-group-prepend label{
+    background-color: $secondary;
+    border-color: $secondary;
+    color: white;;
+}
+*/

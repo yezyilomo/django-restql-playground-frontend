@@ -56,7 +56,7 @@ a:hover{
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #4caf50;
+  color: $primary;
 }
 .token.operator,
 .token.entity,
@@ -72,7 +72,7 @@ a:hover{
 }
 .token.function {
   //color: #f44336;
-  color: #4caf50;
+  color: $primary;
 }
 .token.regex,
 .token.important,
@@ -88,4 +88,8 @@ a:hover{
 }
 .token.entity {
   cursor: help;
+}
+
+.query_editor * {
+  color: $primary;
 }

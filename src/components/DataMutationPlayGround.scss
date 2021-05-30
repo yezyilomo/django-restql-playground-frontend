@@ -8,6 +8,10 @@
     overflow: hidden;
     border: solid 6px transparent;
     padding: 6px;
+    
+    textarea:focus{
+      outline: none;
+    }
 }
 
 /* Editor */

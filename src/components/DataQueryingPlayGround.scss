@@ -19,6 +19,10 @@
 
 .query_editor, .response {
   min-height: calc(60vh + 12px);
+
+  textarea:focus{
+    outline: none;
+  }
 }
 
 /* Start style sidebar scrollbar */

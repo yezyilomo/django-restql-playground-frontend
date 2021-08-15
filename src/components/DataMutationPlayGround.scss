@@ -8,53 +8,85 @@
     overflow: hidden;
     border: solid 6px transparent;
     padding: 6px;
-    
+
     textarea:focus{
-      outline: none;
+      outline: none !important;
     }
 }
 
 /* Editor */
 .editors_container .query_editor_container{
-    height: 20vh;
-    overflow-y: auto;
-    border-radius: 12px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 12px;
+  overflow: hidden;
+  .editor {
+    padding: 45px 0;
+    overflow: auto;
+    transition: height .3s, padding .3s;
+  }
 }
 
 /* Editor */
 .editors_container .payload_editor_container{
-    height: 40vh;
-    overflow-y: auto;
-    border-radius: 12px;
-    margin-top: 12px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 12px;
+  margin-top: 12px;
+  overflow: hidden;
+  .editor {
+    padding: 45px 0;
+    overflow: auto;
+    transition: height .3s, padding .3s;
+  }
 }
 
-.query_editor, .payload_editor {
-    background-color: rgb(245, 245, 245);
+.query-default {
+  height: 25vh;
 }
 
-.query_editor {
-    min-height: 20vh;
+.payload-default {
+  height: 40vh;
 }
 
-.payload_editor {
-    min-height: 40vh;
+.query-min {
+  height: 70px;
+  padding: 40px 0 !important;
+}
+
+.payload-max {
+  height: calc(65vh - 80px);
+}
+
+
+.query-max {
+  height: calc(65vh - 80px);
+}
+
+.payload-min {
+  height: 70px;
+  padding: 40px 0 !important;
 }
 
 
 .response_container>div {
   background-color: rgb(245, 245, 245);
-  height: calc(60vh + 12px);
-  overflow-y: auto;
+  .editor {
+    padding: 45px 0;
+    height: calc(65vh + 12px);
+    overflow: auto;
+  }
 }
 
-.response {
-  min-height: calc(60vh + 12px);
+.query_editor, .payload_editor, .response {
+  min-height: 100% !important;
+  textarea {
+    min-height: 100% !important;
+    columns: 100 !important;
+  }
 }
 
 /* Start style scrollbar */
 $scrollbarBG: rgb(238, 238, 238);
-$thumbBG: $primary;
+$thumbBG: rgb(238, 238, 238);
 
 .editors_container>div::-webkit-scrollbar,
 .response_container>div::-webkit-scrollbar {
@@ -86,7 +118,7 @@ $actionsColor: rgb(245, 245, 245);
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    top: 118px;
+    top: 155px;
     z-index: 500;
     border: solid 8px #ffffff;
 
@@ -108,4 +140,20 @@ $actionsColor: rgb(245, 245, 245);
       border-color: transparent $actionsColor $actionsColor $actionsColor;
     }
 }
+}
+
+.size-toggler-btn {
+  position: absolute;
+  z-index: 2;
+  background-color: $primary;
+  width: 95px;
+  padding: 9px;
+  color: white;
+  font-weight: 500;
+  user-select: none;
+  top: 0;
+  right: 0;
+  border-radius: 0;
+  border-bottom-left-radius: 13px;
+  cursor: pointer;
 }

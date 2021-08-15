@@ -12,6 +12,14 @@ import { BASE_API_URL, CODE_FORMAT_OPTIONS } from '../';
 import js from 'js-beautify'
 
 
+function highlightCode(code) {
+    return Prism.highlight(code, Prism.languages.javascript)
+    .split("\n")
+    .map((line, i) => `<span class='editorLineNumber'>${i + 1}</span>${line}`)
+    .join("\n")
+}
+
+
 function DataQueryingPlayGround(props) {
     const location = useLocation()
     const [request, updateRequest] = useGlobalState(props.action);
@@ -95,7 +103,7 @@ function DataQueryingPlayGround(props) {
                             placeholder="# Write your query here, be sure to select a model first.."
                             value={request.query}
                             onValueChange={updateQuery}
-                            highlight={code => Prism.highlight(code, Prism.languages.javascript)}
+                            highlight={highlightCode}
                             padding={10}
                             className="query_editor"
                             style={style}
@@ -119,7 +127,7 @@ function DataQueryingPlayGround(props) {
                         <Editor
                             placeholder="# Your response will appear here.."
                             value={response}
-                            highlight={code => Prism.highlight(code, Prism.languages.javascript)}
+                            highlight={highlightCode}
                             padding={10}
                             className="response"
                             style={style}
@@ -133,4 +141,4 @@ function DataQueryingPlayGround(props) {
     );
 }
 
-export { DataQueryingPlayGround }
+export { DataQueryingPlayGround, highlightCode }

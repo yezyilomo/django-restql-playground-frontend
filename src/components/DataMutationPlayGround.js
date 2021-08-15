@@ -10,6 +10,7 @@ import Prism from 'prismjs';
 
 import { BASE_API_URL, CODE_FORMAT_OPTIONS } from '../';
 import js from 'js-beautify'
+import { highlightCode } from './DataQueryingPlayGround';
 
 
 function DataMutationPlayGround(props) {
@@ -130,7 +131,7 @@ function DataMutationPlayGround(props) {
                             } first..`}
                             value={request.query}
                             onValueChange={updateQuery}
-                            highlight={code => Prism.highlight(code, Prism.languages.javascript)}
+                            highlight={highlightCode}
                             padding={10}
                             className="query_editor"
                             style={style}
@@ -148,7 +149,7 @@ function DataMutationPlayGround(props) {
                             } first..`}
                             value={request.payload}
                             onValueChange={updatePayload}
-                            highlight={code => Prism.highlight(code, Prism.languages.javascript)}
+                            highlight={highlightCode}
                             padding={10}
                             className="payload_editor"
                             style={style}
@@ -172,7 +173,7 @@ function DataMutationPlayGround(props) {
                         <Editor
                             placeholder="# Your response will appear here.."
                             value={response}
-                            highlight={code => Prism.highlight(code, Prism.languages.javascript)}
+                            highlight={highlightCode}
                             padding={10}
                             className="response"
                             style={style}

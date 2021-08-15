@@ -6,10 +6,10 @@ import './Actions.scss';
 function Actions(props){
 
     let actions = [
-        ["get", "GET"],
-        ["post", "POST"],
-        ["put", "PUT"],
-        ["patch", "PATCH"]
+        ["/get", "GET"],
+        ["/post", "POST"],
+        ["/put", "PUT"],
+        ["/patch", "PATCH"]
     ].map(action => {
         if(props.action === action[1]){
             action.push("btn-secondary");
@@ -21,9 +21,9 @@ function Actions(props){
     })
 
     return (
-        <div class="col-12 row justify-content-left p-0 m-0 px-4 my-3 my-md-2">
+        <div class="col-12 row justify-content-left p-0 m-0 px-4 my-3 my-md-1">
             {actions.map(
-                action => <Link to={action[0]} class={`action btn ${action[2]} col mx-3`}>{action[1]}</Link>
+                action => <Link to={action[0]} class={`action btn ${action[2]} col my-2 my-md-0 mx-3`}>{action[1]}</Link>
             )}
         </div>
     );

@@ -1,13 +1,46 @@
 @import '../variables.scss';
 
+
+.input-group select:focus,
+.input-group input:focus {
+    border-color: $primary !important;
+}
+
+.input-group-append .btn,
 .input-group-prepend label,
+.form-control,
 .custom-select{
     border-radius: $btn-border-radius;
+    border-color: rgb(219, 219, 219);
+}
+
+#generated-link {
+    font-family: "Fira code", "Fira Mono", monospace;
+    font-size: 14px;
+    height: 38px;
+    background-color: white;
+    color: $primary;
+}
+
+.input-group-append {
+    .btn{
+        background-color: rgb(245, 245, 245);
+        height: 38px;
+    
+        .icon{
+            height: 20px;
+            width: 20px;
+        }
+    
+        .icon-tick{
+            background: $green;
+        }
+    }
 }
 
 .input-group-prepend label{
     background-color: rgb(245, 245, 245);
-    
+    user-select: none;
 }
 
 /*

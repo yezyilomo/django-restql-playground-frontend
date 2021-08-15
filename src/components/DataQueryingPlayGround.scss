@@ -110,3 +110,19 @@
     right: 10px !important;
   }
 }
+
+
+// Highlight code with line numbers
+.editor pre,
+.editor textarea {
+  padding-left: 40px !important;
+}
+
+.editor .editorLineNumber {
+  position: absolute;
+  left: 0;
+  color: #cccccc;
+  text-align: center;
+  width: 25px;
+}
+// End code highlight with numbers

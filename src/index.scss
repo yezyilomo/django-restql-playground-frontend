@@ -90,6 +90,17 @@ a:hover{
   cursor: help;
 }
 
-.query_editor * {
-  color: $primary;
+.query_editor {
+  .token.function {
+    //color: #ec5d52;  // Use custom color
+  }
+
+  .token.string {
+    //color: orange;  // Use custom color
+  }
+
+  * {
+    // The rest tokens
+    color: $primary;
+  }
 }

@@ -49,7 +49,7 @@ function App() {
                     }} />
                 </Switch>
             </div>
-            <div class="col-12 p-0 m-0 mt-2">
+            <div class="col-12 p-0 m-0">
                 <Switch location={location}>
                     <Route exact path="/">
                         <Redirect to="/get" />

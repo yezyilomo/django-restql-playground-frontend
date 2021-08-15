@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
 
-import {initializeStore} from './store';
+import { initializeStore } from './store';
 import './custom.scss';
 import './index.scss';
 import './icons.scss';
@@ -18,10 +18,30 @@ initializeStore()
 
 const BASE_API_URL = "https://django-restql-playground-api.yezyilomo.me"
 
-function Application(props){
+const CODE_FORMAT_OPTIONS = {
+    "indent_size": "4",
+    "indent_char": " ",
+    "max_preserve_newlines": "5",
+    "preserve_newlines": true,
+    "keep_array_indentation": false,
+    "break_chained_methods": false,
+    "indent_scripts": "normal",
+    "brace_style": "collapse",
+    "space_before_conditional": true,
+    "unescape_strings": false,
+    "jslint_happy": false,
+    "end_with_newline": false,
+    "wrap_line_length": "0",
+    "indent_inner_html": false,
+    "comma_first": false,
+    "e4x": false,
+    "indent_empty_lines": false
+}
+
+function Application(props) {
     return (
         <Router base="/">
-            <App/>
+            <App />
         </Router>
     );
 }
@@ -38,4 +58,4 @@ serviceWorker.unregister();
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-export { BASE_API_URL }
+export { BASE_API_URL, CODE_FORMAT_OPTIONS }

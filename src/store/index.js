@@ -42,8 +42,7 @@ function initializeStore() {
     id,
     title,
     description
-}
-`,
+}`,
 
 "phones": 
 `{
@@ -51,8 +50,7 @@ function initializeStore() {
     number,
     type,
     student
-}
-`,
+}`,
 
 "books": 
 `{
@@ -64,8 +62,7 @@ function initializeStore() {
         title,
         description
     }
-}
-`,
+}`,
 
 "courses": 
 `{
@@ -82,8 +79,7 @@ function initializeStore() {
             description
         }
     }
-}
-`,
+}`,
 
 "students": 
 `{
@@ -105,8 +101,7 @@ function initializeStore() {
             }
         }
     }
-}
-`
+}`
     }
 
     store.setState("DEFAULT_QUERIES", DEFAULT_QUERIES)
@@ -116,16 +111,14 @@ function initializeStore() {
 `{
     "title": "",
     "description": ""
-}
-`,
+}`,
 
 "phones": 
 `{
     "number": "",
     "type": "",
     "student": ""
-}
-`,
+}`,
 
 "books": 
 `{
@@ -135,8 +128,7 @@ function initializeStore() {
         "title": "",
         "description": ""
     }
-}
-`,
+}`,
 
 "courses": 
 `{
@@ -146,8 +138,7 @@ function initializeStore() {
         "create": [],
         "add": [],
     }
-}
-`,
+}`,
 
 "students": 
 `{
@@ -161,8 +152,7 @@ function initializeStore() {
             "add": []
         }
     }
-}
-`
+}`
     }
 
     store.setState("DEFAULT_PAYLOADS", DEFAULT_PAYLOADS)

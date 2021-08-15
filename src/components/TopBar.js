@@ -10,7 +10,7 @@ import { Navbar} from 'react-bootstrap';
 
 function TopBar(props) {
     return (
-        <Navbar collapseOnSelect="true" className="col-12 mb-5 sticky-top" expand="lg" id="top-navbar">
+        <Navbar collapseOnSelect="true" className="col-12 sticky-top" expand="lg" id="top-navbar">
             <Navbar.Brand className="navbar-brand col-1 col-sm-2 col-md-2 col-lg-3 m-0 p-0 px-1">
                 <Link className="col-12 col-sm-4 m-0 p-0 px-0 px-sm-2 pr-sm-3" to="/">
                     <img src={navbarBrandImage} alt="Settle" />

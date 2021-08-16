@@ -6,7 +6,6 @@ import './DataMutationPlayGround.scss';
 import { Spinner } from 'react-bootstrap';
 import { useGlobalState } from 'state-pool';
 import Editor from "react-simple-code-editor";
-import Prism from 'prismjs';
 
 import { BASE_API_URL, CODE_FORMAT_OPTIONS } from '../';
 import js from 'js-beautify'
@@ -122,7 +121,9 @@ function DataMutationPlayGround(props) {
                     <div class="col-12 p-0 m-0 query_editor_container">
                         <div class="field-label">Query</div>
                         <div class="size-toggler-btn btn-primary text-center" onClick={toggleSize}>
-                        🞣/—
+                            <span class="icon icon-plus" />
+                            <span class="icon icon-divide" />
+                            <span class="icon icon-minus" />
                         </div>
                         <div class={`editor ${size.options[size.selected][0]}`}>
                         <Editor

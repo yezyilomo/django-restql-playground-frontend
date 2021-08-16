@@ -156,4 +156,23 @@ $actionsColor: rgb(245, 245, 245);
   border-radius: 0;
   border-bottom-left-radius: 13px;
   cursor: pointer;
+
+  .icon {
+    width: 13px;
+    height: 13px;
+    background: white;
+  }
+
+  .icon-divide {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 2px;
+    opacity: .5;
+  }
+
+  .icon-minus {
+    position: relative;
+    top: 1px;
+  }
 }
